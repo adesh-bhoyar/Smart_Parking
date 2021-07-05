@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "954481264428",
+    "project_id": "bamboo-volt-318815",
+    "storage_bucket": "bamboo-volt-318815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954481264428:android:f76d9e373d86d218548e89",
+        "android_client_info": {
+          "package_name": "com.adintech.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954481264428-p9856me03jd1giqdo4gekec33802gone.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE26ESNGSkmumAkS6t_0rRP7WJqCAJa-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954481264428-p9856me03jd1giqdo4gekec33802gone.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
