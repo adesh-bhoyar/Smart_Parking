@@ -67,9 +67,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -101,6 +101,7 @@
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_80" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -131,6 +132,7 @@
                                 android:textColor="@color/grey_80" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -151,6 +153,7 @@
                             <View
                                 android:layout_width="@dimen/spacing_large"
                                 android:layout_height="wrap_content" />
+
                             <TextView
                                 android:id="@+id/wheelerText"
                                 android:layout_width="wrap_content"
@@ -189,9 +192,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -225,6 +228,7 @@
                                 android:textColor="@color/grey_80" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/startTime"
                             android:layout_width="match_parent"
@@ -260,7 +264,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey_10"  />
+                        android:background="@color/grey_10" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -290,9 +294,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -326,6 +330,7 @@
                                 android:textColor="@color/grey_80" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/endTime"
                             android:layout_width="match_parent"
@@ -361,7 +366,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey_10"  />
+                        android:background="@color/grey_10" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -391,9 +396,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -427,6 +432,7 @@
                                 android:textColor="@color/grey_80" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/checkoutTime"
                             android:layout_width="match_parent"
@@ -462,7 +468,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey_10"  />
+                        android:background="@color/grey_10" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -492,9 +498,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -532,7 +538,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey_10"  />
+                        android:background="@color/grey_10" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -560,13 +566,14 @@
                             android:textColor="@color/grey_80" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:clickable="true"
                         android:id="@+id/openInvoicePdf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_middle"
                         android:background="@drawable/edit_text_round_bg_outline"
+                        android:clickable="true"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -576,21 +583,21 @@
                             app:srcCompat="@drawable/ic_baseline_insert_drive_file_24"
                             app:tint="@color/grey_40" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:gravity="center_vertical"
-                                android:layout_height="@dimen/spacing_xmlarge"
-                                android:layout_weight="1"
-                                android:text="invoice.pdf"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/grey_80" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/spacing_xmlarge"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="invoice.pdf"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_80" />
 
 
                         <ImageView
-                            android:clickable="true"
                             android:id="@+id/shareInvoicePdf"
                             android:layout_width="@dimen/spacing_xmlarge"
                             android:layout_height="@dimen/spacing_xmlarge"
+                            android:clickable="true"
                             android:padding="@dimen/spacing_xmedium"
                             app:srcCompat="@drawable/ic_baseline_share_24"
                             app:tint="@color/grey_40" />
@@ -603,12 +610,12 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/checkoutBtn"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_smlarge"
             android:clickable="true"
             android:tint="@android:color/white"
+            android:visibility="gone"
             app:fabSize="normal"
             app:layout_anchor="@id/nested_scroll_view"
             app:layout_anchorGravity="top|right|end"
@@ -617,12 +624,12 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/payBtn"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_smlarge"
             android:clickable="true"
             android:tint="@android:color/white"
+            android:visibility="gone"
             app:fabSize="normal"
             app:layout_anchor="@id/nested_scroll_view"
             app:layout_anchorGravity="top|right|end"

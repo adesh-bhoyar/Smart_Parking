@@ -58,9 +58,9 @@
                                 android:id="@+id/nameText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="Name"
                                 android:maxLines="1"
-                                android:singleLine="true"
-                                android:hint="Name" />
+                                android:singleLine="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,10 +102,10 @@
                                     android:id="@+id/phoneText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:hint="Phone Number"
                                     android:inputType="number"
                                     android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:hint="Phone Number" />
+                                    android:singleLine="true" />
 
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
@@ -163,9 +163,9 @@
                                     android:id="@+id/emailText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:hint="Current Email ID"
                                     android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:hint="Current Email ID" />
+                                    android:singleLine="true" />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -209,9 +209,9 @@
                                     android:id="@+id/newEmailText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:hint="New Email ID"
                                     android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:hint="New Email ID" />
+                                    android:singleLine="true" />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -256,10 +256,10 @@
                                     android:id="@+id/currentPasswordText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
+                                    android:hint="Current Password"
                                     android:inputType="textPassword"
-                                    android:hint="Current Password" />
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
 
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>

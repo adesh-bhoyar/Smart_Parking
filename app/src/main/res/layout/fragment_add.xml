@@ -49,9 +49,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -83,6 +83,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                         android:textColor="@color/grey_80" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,9 +100,11 @@
                         android:background="@android:color/transparent"
                         android:tint="@color/grey_40"
                         app:srcCompat="@drawable/ic_baseline_person_24" />
+
                     <View
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="wrap_content" />
+
                     <EditText
                         android:id="@+id/emailText"
                         style="@style/EditText.Flat.Grey"
@@ -111,6 +114,7 @@
                         android:hint="E-Mail ID"
                         android:minHeight="45dp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/scanBtn"
                     android:layout_width="match_parent"
@@ -132,14 +136,15 @@
                     <View
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="wrap_content" />
+
                     <Spinner
                         android:id="@+id/vehicleSelect"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:layout_constraintTop_toBottomOf="@+id/slotNoText"
-                        />
+                        app:layout_constraintTop_toBottomOf="@+id/slotNoText" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -160,6 +165,7 @@
                     <View
                         android:layout_width="@dimen/spacing_large"
                         android:layout_height="wrap_content" />
+
                     <TextView
                         android:id="@+id/wheelerText"
                         android:layout_width="wrap_content"
@@ -198,9 +204,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -234,6 +240,7 @@
                         android:textColor="@color/grey_80" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/endTime"
                     android:layout_width="match_parent"
@@ -270,7 +277,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/grey_10"  />
+                android:background="@color/grey_10" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -300,9 +307,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -339,6 +346,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp" />
+
             <Button
                 android:id="@+id/bookBtn"
                 style="@style/Widget.AppCompat.Button.Borderless"
@@ -353,143 +361,143 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-<!--    <com.google.android.material.card.MaterialCardView-->
-<!--        android:id="@+id/numberPlateCard"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:theme="@style/Theme.MaterialComponents.Light"-->
-<!--        app:cardCornerRadius="3dp"-->
-<!--        app:cardElevation="2dp"-->
-<!--        app:cardMaxElevation="2dp"-->
-<!--        app:cardPreventCornerOverlap="true"-->
-<!--        app:cardUseCompatPadding="true"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:id="@+id/numberPlateCard"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:theme="@style/Theme.MaterialComponents.Light"-->
+    <!--        app:cardCornerRadius="3dp"-->
+    <!--        app:cardElevation="2dp"-->
+    <!--        app:cardMaxElevation="2dp"-->
+    <!--        app:cardPreventCornerOverlap="true"-->
+    <!--        app:cardUseCompatPadding="true"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
 
-<!--            <TextView-->
-<!--                android:id="@+id/placeText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="28dp"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/placeLabel"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/placeLabel" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/placeText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="28dp"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/placeLabel"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/placeLabel" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/coordText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="28dp"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/placeText"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/placeText"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/placeText" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/coordText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="28dp"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintEnd_toEndOf="@+id/placeText"-->
+    <!--                app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/placeText"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/placeText" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/slotNoLabel"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="44dp"-->
-<!--                android:text="Slot number:"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/amountText"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/amountText" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/slotNoLabel"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="44dp"-->
+    <!--                android:text="Slot number:"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/amountText"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/amountText" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/slotNoText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/slotNoLabel"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/slotNoLabel" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/slotNoText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/slotNoLabel"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/slotNoLabel" />-->
 
-<!--            <ImageButton-->
-<!--                android:id="@+id/emailLabel"-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:layout_marginTop="60dp"-->
-<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--                android:src="@drawable/ic_baseline_email_24"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/placeLabel"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/placeLabel" />-->
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/emailLabel"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                android:src="@drawable/ic_baseline_email_24"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/placeLabel"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/placeLabel" />-->
 
-<!--            <EditText-->
-<!--                android:id="@+id/emailText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:ems="10"-->
-<!--                android:hint="email"-->
-<!--                android:inputType="textPersonName"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/emailLabel"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/emailLabel" />-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/emailText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:ems="10"-->
+    <!--                android:hint="email"-->
+    <!--                android:inputType="textPersonName"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/emailLabel"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/emailLabel" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/amountText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="44dp"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/startBtn"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/startBtn" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/amountText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="44dp"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/startBtn"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/startBtn" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/wheelerText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="28dp"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/emailText"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/emailText" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/wheelerText"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="28dp"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/emailText"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/emailText" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/numberPlate"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="TextView"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/wheelerText"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/wheelerText" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/numberPlate"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="TextView"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/wheelerText"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/wheelerText" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/startBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="28dp"-->
-<!--                android:text="Select Start Date"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/wheelerText"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/wheelerText" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/startBtn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="28dp"-->
+    <!--                android:text="Select Start Date"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/wheelerText"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/wheelerText" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/endBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Select End Date"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/startBtn"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/startBtn" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/endBtn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Select End Date"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/startBtn"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/startBtn" />-->
 
-<!--            <Button-->
-<!--                android:id="@+id/bookBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="52dp"-->
-<!--                android:text="Book "-->
-<!--                app:layout_constraintStart_toStartOf="@+id/slotNoLabel"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/slotNoLabel" />-->
+    <!--            <Button-->
+    <!--                android:id="@+id/bookBtn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="52dp"-->
+    <!--                android:text="Book "-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/slotNoLabel"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/slotNoLabel" />-->
 
-<!--            <Button-->
-<!--                android:id="@+id/scanBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="scan"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/bookBtn"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/bookBtn" />-->
+    <!--            <Button-->
+    <!--                android:id="@+id/scanBtn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="scan"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/bookBtn"-->
+    <!--                app:layout_constraintTop_toTopOf="@+id/bookBtn" />-->
 
 
-<!--    </com.google.android.material.card.MaterialCardView>-->
+    <!--    </com.google.android.material.card.MaterialCardView>-->
 
 
 </LinearLayout>

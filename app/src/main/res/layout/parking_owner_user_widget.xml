@@ -8,6 +8,7 @@
     android:padding="@dimen/widget_margin">
 
     <TextView style="@style/WidgetButtonVerticalSpace" />
+
     <TextView
         style="@style/WidgetTextView"
         android:text="Smart Parking (Owner User)" />
@@ -24,7 +25,7 @@
 
         <LinearLayout
             android:id="@+id/dashboardBtn"
-            style="@style/WidgetBeverageButton" >
+            style="@style/WidgetBeverageButton">
 
             <ImageView
                 style="@style/WidgetButtonImage"
@@ -41,11 +42,12 @@
 
         <LinearLayout
             android:id="@+id/historyBtn"
-            style="@style/WidgetBeverageButton" >
+            style="@style/WidgetBeverageButton">
 
             <ImageView
                 style="@style/WidgetButtonImage"
                 android:src="@drawable/ic_history_black_24" />
+
             <TextView
                 style="@style/WidgetButtonText"
                 android:text="History" />

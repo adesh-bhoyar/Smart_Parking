@@ -8,6 +8,7 @@
     android:padding="@dimen/widget_margin">
 
     <TextView style="@style/WidgetButtonVerticalSpace" />
+
     <TextView
         style="@style/WidgetTextView"
         android:text="Smart Parking (Normal User)" />
@@ -24,12 +25,13 @@
 
         <LinearLayout
             android:id="@+id/mapsBtn"
-            style="@style/WidgetBeverageButton" >
+            style="@style/WidgetBeverageButton">
 
             <ImageView
                 style="@style/WidgetButtonImage"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_location_black_24" />
+
             <TextView
                 style="@style/WidgetButtonText"
                 android:text="Maps" />
@@ -45,6 +47,7 @@
             <ImageView
                 style="@style/WidgetButtonImage"
                 android:src="@drawable/ic_near_me_black_24" />
+
             <TextView
                 style="@style/WidgetButtonText"
                 android:text="Near-By" />
@@ -55,11 +58,12 @@
 
         <LinearLayout
             android:id="@+id/historyBtn"
-            style="@style/WidgetBeverageButton" >
+            style="@style/WidgetBeverageButton">
 
             <ImageView
                 style="@style/WidgetButtonImage"
                 android:src="@drawable/ic_history_black_24" />
+
             <TextView
                 style="@style/WidgetButtonText"
                 android:text="History" />

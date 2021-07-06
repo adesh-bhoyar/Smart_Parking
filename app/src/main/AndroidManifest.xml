@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.adintech.myapplication">
+    package="com.adintech.smartparking">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,34 +12,35 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".utils.AppConstants"
+        android:name="com.adintech.smartparking.utils.AppConstants"
         android:allowBackup="true"
-        android:icon="@drawable/logo_no_name"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_with_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterLogin.RecoverAccountActivity"
+        <activity
+            android:name="com.adintech.smartparking.RegisterLogin.RecoverAccountActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.VerifiedActivity"
+            android:name="com.adintech.smartparking.RegisterLogin.VerifiedActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.StepperWizardActivity"
+            android:name="com.adintech.smartparking.RegisterLogin.StepperWizardActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.ResetPasswordActivity"
+            android:name="com.adintech.smartparking.RegisterLogin.ResetPasswordActivity"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".common.BookingDetailsActivity" />
-        <activity android:name=".ui.profile.UpiDetailsActivity" />
-        <activity android:name=".ui.profile.AboutMeActivity" />
-        <activity android:name=".ui.profile.ChangePasswordActivity" />
-        <activity android:name=".ui.profile.PersonalDetailsActivity" />
-        <activity android:name=".NormalUser.NearByAreaActivity" />
-        <activity android:name=".OwnerUser.AreaHistoryActivity" />
-        <activity android:name=".NormalUser.UserHistoryActivity" />
+        <activity android:name="com.adintech.smartparking.common.BookingDetailsActivity" />
+        <activity android:name="com.adintech.smartparking.ui.profile.UpiDetailsActivity" />
+        <activity android:name="com.adintech.smartparking.ui.profile.AboutMeActivity" />
+        <activity android:name="com.adintech.smartparking.ui.profile.ChangePasswordActivity" />
+        <activity android:name="com.adintech.smartparking.ui.profile.PersonalDetailsActivity" />
+        <activity android:name="com.adintech.smartparking.NormalUser.NearByAreaActivity" />
+        <activity android:name="com.adintech.smartparking.OwnerUser.AreaHistoryActivity" />
+        <activity android:name="com.adintech.smartparking.NormalUser.UserHistoryActivity" />
         <activity
-            android:name=".RegisterLogin.SplashScreen"
+            android:name="com.adintech.smartparking.RegisterLogin.SplashScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,10 +70,10 @@
                     android:scheme="one_q_shop" />
             </intent-filter>
         </activity>
-        <activity android:name=".OwnerUser.MainOwnerActivity" />
+        <activity android:name="com.adintech.smartparking.OwnerUser.MainOwnerActivity" />
         <activity
-            android:name=".NormalUser.MainNormalActivity"
-            android:launchMode="singleTop" >
+            android:name="com.adintech.smartparking.NormalUser.MainNormalActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -80,31 +81,30 @@
             </intent-filter>
 
         </activity> <!-- for no stacking due to notification -->
-        <activity android:name=".NormalUser.BookParkingAreaActivity" />
-        <activity android:name=".OwnerUser.AddPositionActivity" />
-        <activity android:name=".NormalUser.GPSMapActivity" />
+        <activity android:name="com.adintech.smartparking.NormalUser.BookParkingAreaActivity" />
+        <activity android:name="com.adintech.smartparking.OwnerUser.AddPositionActivity" />
+        <activity android:name="com.adintech.smartparking.NormalUser.GPSMapActivity" />
         <activity
-            android:name=".RegisterLogin.ForgotPasswordActivity"
+            android:name="com.adintech.smartparking.RegisterLogin.ForgotPasswordActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.RegisterActivity"
+            android:name="com.adintech.smartparking.RegisterLogin.RegisterActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.LoginActivity"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:name="com.adintech.smartparking.RegisterLogin.LoginActivity"
+            android:theme="@style/NoActionBar"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" /> <!-- Google Maps API key -->
         <receiver
-            android:name=".utils.notifications.NotificationReceiver"
+            android:name="com.adintech.smartparking.utils.notifications.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
-        <receiver android:name=".utils.notifications.NotificationActionReceiver" /> <!-- Notification receiver -->
+        <receiver android:name="com.adintech.smartparking.utils.notifications.NotificationActionReceiver" /> <!-- Notification receiver -->
         <!-- Home Screen Widget Start -->
         <receiver
-            android:name=".utils.widgets.ParkingOwnerUserWidget"
+            android:name="com.adintech.smartparking.utils.widgets.ParkingOwnerUserWidget"
             android:label="Smart Parking (Owner User)">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -115,7 +115,7 @@
                 android:resource="@xml/parking_owner_user_widget_info" />
         </receiver>
         <receiver
-            android:name=".utils.widgets.ParkingNormalUserWidget"
+            android:name="com.adintech.smartparking.utils.widgets.ParkingNormalUserWidget"
             android:label="Smart Parking (Normal User)">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -127,7 +127,7 @@
         </receiver> <!-- Home Screen Widget End -->
         <!-- Background service Start -->
         <service
-            android:name=".utils.services.MyParkingService"
+            android:name="com.adintech.smartparking.utils.services.MyParkingService"
             android:foregroundServiceType="dataSync" />
     </application>
 

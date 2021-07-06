@@ -52,9 +52,9 @@
                                 android:id="@+id/upiIdText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="UPI-ID"
                                 android:maxLines="1"
-                                android:singleLine="true"
-                                android:hint="UPI-ID" />
+                                android:singleLine="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,9 +84,9 @@
                                 android:id="@+id/upiNameText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="UPI-Name"
                                 android:maxLines="1"
-                                android:singleLine="true"
-                                android:hint="UPI-Name" />
+                                android:singleLine="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 

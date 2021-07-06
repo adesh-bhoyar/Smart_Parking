@@ -67,9 +67,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -82,25 +82,27 @@
                                 android:id="@+id/areaNameText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="Area Name"
                                 android:maxLines="1"
-                                android:singleLine="true"
-                                android:hint="Area Name" />
+                                android:singleLine="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
+
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.3"
                             android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
                             android:textColorHint="@color/grey_40">
+
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/totalSlotsText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:singleLine="true"
                                 android:hint="Slots*"
-                                android:inputType="number" />
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:singleLine="true" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 
@@ -120,37 +122,39 @@
                             android:layout_height="wrap_content"
                             android:text="Slot Name(s)"
                             android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <com.hootsuite.nachos.NachoTextView
                                 android:id="@+id/et_tag"
-                                android:layout_weight="1"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/spacing_middle"
-                                android:background="@android:color/transparent"
-                                android:layout_width="0dp">
-                            </com.hootsuite.nachos.NachoTextView>
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"></com.hootsuite.nachos.NachoTextView>
 
                             <Button
-                                android:layout_weight="0.4"
                                 android:id="@+id/loadFromFile"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/spacing_middle"
+                                android:layout_weight="0.4"
                                 android:background="@drawable/btn_purple_a400"
                                 android:text="Load file"
                                 android:textAllCaps="false"
-                                android:textColor="@android:color/white"
-                                android:layout_width="0dp" />
+                                android:textColor="@android:color/white" />
 
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/grey_10"  />
+                        android:background="@color/grey_10" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -180,9 +184,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -201,10 +205,9 @@
                                     android:id="@+id/upiIdText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
                                     android:hint="UPI ID*"
-                                     />
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -212,14 +215,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textColorHint="@color/grey_40">
+
                                 <androidx.appcompat.widget.AppCompatEditText
                                     android:id="@+id/upiNameText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
                                     android:hint="UPI Name*"
-                             />
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -255,63 +258,69 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <LinearLayout
-                            android:layout_margin="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <LinearLayout
-                                android:layout_width="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:gravity="bottom"
-                                android:orientation="horizontal">
+                                android:layout_weight="1"
+                                android:textColorHint="@color/grey_40">
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    android:layout_width="0dp"
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/amount2Text"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:textColorHint="@color/grey_40">
-                                    <androidx.appcompat.widget.AppCompatEditText
-                                        android:id="@+id/amount2Text"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:maxLines="1"
-                                        android:singleLine="true"
-                                        android:hint="2-wheeler*"
-                                        android:inputType="number" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                                <com.google.android.material.textfield.TextInputLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:textColorHint="@color/grey_40">
-                                    <androidx.appcompat.widget.AppCompatEditText
-                                        android:id="@+id/amount3Text"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:maxLines="1"
-                                        android:singleLine="true"
-                                        android:hint="3-wheeler*"
-                                        android:inputType="number" />
-                                </com.google.android.material.textfield.TextInputLayout>
-                                <com.google.android.material.textfield.TextInputLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:textColorHint="@color/grey_40">
-                                    <androidx.appcompat.widget.AppCompatEditText
-                                        android:id="@+id/amount4Text"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:maxLines="1"
-                                        android:singleLine="true"
-                                        android:hint="4-wheeler*"
-                                        android:inputType="number" />
-                                </com.google.android.material.textfield.TextInputLayout>
+                                    android:hint="2-wheeler*"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
-                            </LinearLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColorHint="@color/grey_40">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/amount3Text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="3-wheeler*"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColorHint="@color/grey_40">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/amount4Text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="4-wheeler*"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
                         </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -335,21 +344,21 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <!-- search bar layout -->
-<!--    <include-->
-<!--        android:id="@+id/search_bar"-->
-<!--        layout="@layout/include_card_view_search_bar" />-->
+    <!--    <include-->
+    <!--        android:id="@+id/search_bar"-->
+    <!--        layout="@layout/include_card_view_search_bar" />-->
 </RelativeLayout>
 
-<!--    <Button-->
-<!--        android:id="@+id/addLocationBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="304dp"-->
-<!--        android:text="Next"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/google_map"-->
-<!--        app:layout_constraintVertical_bias="0.975" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/addLocationBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="304dp"-->
+    <!--        android:text="Next"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/google_map"-->
+    <!--        app:layout_constraintVertical_bias="0.975" />-->
 
 
 
