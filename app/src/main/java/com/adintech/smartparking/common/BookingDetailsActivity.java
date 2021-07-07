@@ -279,7 +279,7 @@ public class BookingDetailsActivity extends AppCompatActivity implements View.On
                                             payData();
                                         } else {
 //                        upiPayment.payUsingUpi(String.valueOf(bookingSlot.amount), upiInfo.upiId, upiInfo.upiName, note,BookParkingAreaActivity.this)
-                                            upiPayment.payUsingUpi(String.valueOf(1), "micsilveira111@oksbi", "Michael", note, BookingDetailsActivity.this);
+                                            upiPayment.payUsingUpi(String.valueOf(1), "8552931194@ybl", "Aditya", note, BookingDetailsActivity.this);
                                         }
                                     }
                                 });

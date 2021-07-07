@@ -92,7 +92,7 @@
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.LoginActivity"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
