@@ -117,7 +117,7 @@
                             android:layout_marginBottom="@dimen/spacing_xsmall"
                             android:layout_weight="1"
                             android:visibility="visible"
-                            app:cardCornerRadius="2dp"
+                            app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <LinearLayout
@@ -190,7 +190,7 @@
                             android:layout_marginBottom="@dimen/spacing_xsmall"
                             android:layout_weight="1"
                             android:visibility="visible"
-                            app:cardCornerRadius="2dp"
+                            app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <LinearLayout
@@ -271,7 +271,7 @@
                             android:layout_marginBottom="@dimen/spacing_xsmall"
                             android:layout_weight="1"
                             android:visibility="visible"
-                            app:cardCornerRadius="2dp"
+                            app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <LinearLayout
