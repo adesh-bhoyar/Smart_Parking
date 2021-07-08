@@ -1,79 +1,37 @@
 package com.adintech.smartparking.ui.profile;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.adintech.smartparking.BuildConfig;
 import com.adintech.smartparking.R;
 
 
 public class AboutMeActivity extends AppCompatActivity {
-
-    LinearLayout dominicBtn, joelBtn, leninBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        initComponents();
-        attachListeners();
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);  //slide from left to right
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);  //slide from left to right
-    }
-
-    private void initComponents() {
-        getSupportActionBar().setTitle("About Me");
+        TextView textView = findViewById(R.id.version_name);
+        //back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        dominicBtn = findViewById(R.id.dominicBtn);
-        joelBtn = findViewById(R.id.joelBtn);
-        leninBtn = findViewById(R.id.leninBtn);
+
+        String versionName = BuildConfig.VERSION_NAME;
+        textView.setText(getString(R.string.text_version, versionName));
     }
 
-    private void attachListeners() {
-        dominicBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/dms24081999/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
-        joelBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/joel-monis-146b6016b/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
-        leninBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/lenin-bardeskar/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+
+    public void onTAndCViewClicked(View view) {
+
     }
 }

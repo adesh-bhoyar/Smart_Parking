@@ -21,26 +21,47 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.RecoverAccountActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.VerifiedActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.StepperWizardActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.ResetPasswordActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
-        <activity android:name="com.adintech.smartparking.common.BookingDetailsActivity" />
-        <activity android:name="com.adintech.smartparking.ui.profile.UpiDetailsActivity" />
-        <activity android:name="com.adintech.smartparking.ui.profile.AboutMeActivity" />
-        <activity android:name="com.adintech.smartparking.ui.profile.ChangePasswordActivity" />
-        <activity android:name="com.adintech.smartparking.ui.profile.PersonalDetailsActivity" />
-        <activity android:name="com.adintech.smartparking.NormalUser.NearByAreaActivity" />
-        <activity android:name="com.adintech.smartparking.OwnerUser.AreaHistoryActivity" />
-        <activity android:name="com.adintech.smartparking.NormalUser.UserHistoryActivity" />
+        <activity
+            android:name="com.adintech.smartparking.common.BookingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.ui.profile.UpiDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.ui.profile.AboutMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.ui.profile.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.ui.profile.PersonalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.NormalUser.NearByAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.OwnerUser.AreaHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.NormalUser.UserHistoryActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.SplashScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,10 +91,13 @@
                     android:scheme="one_q_shop" />
             </intent-filter>
         </activity>
-        <activity android:name="com.adintech.smartparking.OwnerUser.MainOwnerActivity" />
+        <activity
+            android:name="com.adintech.smartparking.OwnerUser.MainOwnerActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.adintech.smartparking.NormalUser.MainNormalActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,17 +105,26 @@
             </intent-filter>
 
         </activity> <!-- for no stacking due to notification -->
-        <activity android:name="com.adintech.smartparking.NormalUser.BookParkingAreaActivity" />
-        <activity android:name="com.adintech.smartparking.OwnerUser.AddPositionActivity" />
-        <activity android:name="com.adintech.smartparking.NormalUser.GPSMapActivity" />
+        <activity
+            android:name="com.adintech.smartparking.NormalUser.BookParkingAreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.OwnerUser.AddPositionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.adintech.smartparking.NormalUser.GPSMapActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.RegisterActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.adintech.smartparking.RegisterLogin.LoginActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
 
         <meta-data
