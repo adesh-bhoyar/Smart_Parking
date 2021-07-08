@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
+            android:layout_weight="0.8"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -34,7 +34,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="12dp"
             android:layout_weight="1"
-            android:gravity=""
+            android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -47,52 +47,57 @@
                 <TextView
                     android:id="@+id/availableLabel"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
+                    android:textSize="13sp"
                     android:text="Available"
-                    android:textColor="#000" />
+                    android:textColor="@color/green_700" />
 
                 <TextView
                     android:id="@+id/occupiedLabel"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="Occupied"
-                    android:textColor="#000" />
+                    android:textSize="13sp"
+                    android:textColor="@color/yellow_800" />
 
                 <TextView
                     android:id="@+id/price2Label"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
+                    android:textSize="13sp"
                     android:text="2 wheels"
-                    android:textColor="#000" />
+                    android:textColor="@color/orange_600" />
 
                 <TextView
                     android:id="@+id/price3Label"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
+                    android:textSize="13sp"
                     android:text="3 wheels"
-                    android:textColor="#000" />
+                    android:textColor="@color/orange_700" />
 
                 <TextView
                     android:id="@+id/price4Label"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="4 wheels"
-                    android:textColor="#000" />
+                    android:textSize="13sp"
+                    android:textColor="@color/orange_900" />
 
             </LinearLayout>
 
@@ -110,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:textSize="13sp"
                     android:text=" : "
                     android:textColor="#000" />
 
@@ -121,6 +127,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text=" : "
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
@@ -131,6 +138,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text=" : "
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
@@ -141,6 +149,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text=" : "
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
@@ -151,6 +160,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text=" : "
+                    android:textSize="13sp"
                     android:textColor="#000" />
             </LinearLayout>
 
@@ -164,50 +174,55 @@
                 <TextView
                     android:id="@+id/availableText"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="Rs.15/hr"
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/occupiedText"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="Rs.15/hr"
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/price2Text"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="Rs.15/hr"
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/price3Text"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="Rs.15/hr"
+                    android:textSize="13sp"
                     android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/price4Text"
                     style="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left"
+                    android:textSize="13sp"
                     android:text="Rs.15/hr"
                     android:textColor="#000" />
             </LinearLayout>
