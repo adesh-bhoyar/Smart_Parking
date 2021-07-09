@@ -32,6 +32,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,7 +46,7 @@ import java.util.Map;
 public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallback {
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;
-    Button getLocationBtn;
+    FloatingActionButton getLocationBtn;
 
     GoogleMap gMap;
     LatLng globalLatLng;
@@ -67,7 +68,7 @@ public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallb
         initComponents();
         attachListeners();
 
-        getPreCurrentLocation();
+
         if (!utils.isNetworkAvailable(getApplication())) {
             Toast.makeText(GPSMapActivity.this, "No Network Available!", Toast.LENGTH_SHORT).show();
         }
@@ -115,6 +116,20 @@ public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallb
         client = LocationServices.getFusedLocationProviderClient(GPSMapActivity.this);
 
         getLocationBtn = findViewById(R.id.getLocationBtn);
+        getLocationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                supportMapFragment.getMapAsync(new OnMapReadyCallback() {
+                    @Override
+                    public void onMapReady(GoogleMap googleMap) {
+                        getPreCurrentLocation();
+                        gMap = googleMap;
+                        gMap.clear();
+                        attachMarkerOnMap();
+                    }
+                });
+            }
+        });
     }
 
     private void attachListeners() {
@@ -135,20 +150,7 @@ public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallb
                     public void onCancelled(@NonNull DatabaseError error) {
                     }
                 });
-        getLocationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                supportMapFragment.getMapAsync(new OnMapReadyCallback() {
-                    @Override
-                    public void onMapReady(GoogleMap googleMap) {
-                        gMap = googleMap;
-                        gMap.clear();
-                        getPreCurrentLocation();
-                        attachMarkerOnMap();
-                    }
-                });
-            }
-        });
+
     }
 
     private void attachMarkerOnMap() {

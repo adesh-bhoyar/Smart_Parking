@@ -21,9 +21,14 @@ import com.adintech.smartparking.utils.notifications.AlarmUtils;
 import com.adintech.smartparking.utils.notifications.NotificationReceiver;
 import com.adintech.smartparking.utils.services.MyParkingService;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
-
     LinearLayout personalDetailsBtn, changePasswordBtn, aboutMeBtn, logoutBtn, upiDetailsBtn;
     TextView nameText;
     User userObj;
@@ -55,6 +60,7 @@ public class ProfileFragment extends Fragment {
         aboutMeBtn = root.findViewById(R.id.aboutMeBtn);
         upiDetailsBtn = root.findViewById(R.id.upiDetailsBtn);
         nameText.setText(userObj.name);
+        auth = FirebaseAuth.getInstance();
     }
 
     private void attachListeners() {
@@ -77,14 +83,25 @@ public class ProfileFragment extends Fragment {
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
-
-        upiDetailsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), UpiDetailsActivity.class));
-                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
+        if (userObj.userType != 3) {
+            upiDetailsBtn.setVisibility(View.VISIBLE);
+            upiDetailsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), UpiDetailsActivity.class));
+                    getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            });
+        }else {
+            upiDetailsBtn.setVisibility(View.GONE);
+            upiDetailsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), UpiDetailsActivity.class));
+                    getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            });
+        }
 
         changePasswordBtn.setOnClickListener(new View.OnClickListener() {
             @Override

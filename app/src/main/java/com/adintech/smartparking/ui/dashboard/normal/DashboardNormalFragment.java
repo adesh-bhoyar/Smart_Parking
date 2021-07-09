@@ -78,7 +78,7 @@ public class DashboardNormalFragment extends Fragment implements OnMapReadyCallb
         initComponents(root);
         attachListeners();
 
-        getPreCurrentLocation();
+//        getPreCurrentLocation();
         if (!utils.isNetworkAvailable(getActivity().getApplication())) {
             Toast.makeText(getActivity(), "No Network Available!", Toast.LENGTH_SHORT).show();
         }
