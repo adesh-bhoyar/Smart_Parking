@@ -22,6 +22,7 @@ import com.adintech.smartparking.OwnerUser.MainOwnerActivity;
 import com.adintech.smartparking.R;
 import com.adintech.smartparking.classes.BookedSlots;
 import com.adintech.smartparking.classes.ParkingArea;
+import com.adintech.smartparking.classes.UpiInfo;
 import com.adintech.smartparking.classes.User;
 import com.adintech.smartparking.utils.AppConstants;
 import com.adintech.smartparking.utils.BasicUtils;
@@ -71,6 +72,7 @@ public class BookingDetailsActivity extends AppCompatActivity implements View.On
 
     FirebaseAuth auth;
     FirebaseDatabase db;
+    UpiInfo upiInfo;
 
     String UUID;
     Boolean run_once = false;
@@ -176,6 +178,29 @@ public class BookingDetailsActivity extends AppCompatActivity implements View.On
                     amountText.setText(String.valueOf(bookingSlot.amount).concat(" (Paid)"));
                 }
 
+                db.getReference().child("ParkingAreas").child(bookingSlot.placeID)
+                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                ParkingArea parkingArea = snapshot.getValue(ParkingArea.class);
+                                setAddValues(parkingArea);
+                                db.getReference().child("UpiInfo").child(parkingArea.userID).addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        upiInfo = snapshot.getValue(UpiInfo.class);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                            }
+                        });
+
                 updatePayCheckoutUI();
 
                 findViewById(R.id.openInvoicePdf).setOnClickListener(BookingDetailsActivity.this);
@@ -278,8 +303,7 @@ public class BookingDetailsActivity extends AppCompatActivity implements View.On
                                             bookingSlot.hasPaid = 1;
                                             payData();
                                         } else {
-//                        upiPayment.payUsingUpi(String.valueOf(bookingSlot.amount), upiInfo.upiId, upiInfo.upiName, note,BookParkingAreaActivity.this)
-                                            upiPayment.payUsingUpi(String.valueOf(1), "8552931194@ybl", "Aditya", note, BookingDetailsActivity.this);
+                                            upiPayment.payUsingUpi(String.valueOf(bookingSlot.amount), upiInfo.upiId, upiInfo.upiName, note, BookingDetailsActivity.this);
                                         }
                                     }
                                 });
