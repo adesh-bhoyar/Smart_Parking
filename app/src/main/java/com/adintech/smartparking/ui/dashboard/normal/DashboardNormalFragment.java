@@ -246,7 +246,7 @@ public class DashboardNormalFragment extends Fragment implements OnMapReadyCallb
                                     location.getLongitude());
                             googleMap.addMarker(new MarkerOptions().position(globalLatLng).title("I am here"));
                             if (zoom) {
-                                gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLng, 18));
+                                gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLng, 14));
                             }
                         }
                     });

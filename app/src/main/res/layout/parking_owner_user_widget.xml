@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/widget_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -60,8 +59,6 @@
 
     <TextView style="@style/WidgetButtonVerticalSpace" />
 
-    <TextView
-        android:id="@+id/coffee_quote"
-        style="@style/WidgetQuote" />
+    <TextView style="@style/WidgetQuote" />
 
 </LinearLayout>

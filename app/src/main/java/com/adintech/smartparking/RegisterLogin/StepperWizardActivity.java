@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,9 +23,8 @@ import com.adintech.smartparking.R;
 
 public class StepperWizardActivity extends AppCompatActivity {
 
-    private static final int MAX_STEP = 4;
+    private static final int MAX_STEP = 3;
     Intent intent;
-    Window window;
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -34,7 +32,6 @@ public class StepperWizardActivity extends AppCompatActivity {
     private String title_array[] = {
             "Park on the go",
             "Closest location",
-            "Number-plate scanning",
             "Cashless Transactions and Receipt"
     };
     //  viewpager change listener
@@ -63,19 +60,16 @@ public class StepperWizardActivity extends AppCompatActivity {
     private String description_array[] = {
             "Park on the go",
             "Get the closest area with GPS support!",
-            "Number-plate scanning",
             "Pay via UPI and get Receipt!",
     };
     private int about_images_array[] = {
             R.drawable.ic_parking_checkout,
             R.drawable.ic_baseline_location_on_24,
-            R.drawable.ic_plate_number,
             R.drawable.ic_upi
     };
     private int color_array[] = {
             R.color.red_600,
             R.color.blue_grey_600,
-            R.color.purple_600,
             R.color.deep_orange_600
     };
 

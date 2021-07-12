@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_scan"
         android:icon="@drawable/ic_baseline_image_search_24"
-        android:title="@string/title_scan_fragment" />
+        android:title="@string/title_add_fragment" />
 
     <item
         android:id="@+id/navigation_profile"

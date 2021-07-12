@@ -1,13 +1,11 @@
 package com.adintech.smartparking.ui.scan;
 
 import android.app.Activity;
-import android.content.Context;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +15,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -69,7 +66,7 @@ import retrofit2.Retrofit;
 
 public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPlatePopUpListener {
 
-    FloatingActionButton fab_cameraBtn, fab_textBtn, fab_add;
+    FloatingActionButton fab_textBtn, fab_add;
     Bitmap upload;
     TextView empty_view;
     boolean rotate = false;
@@ -80,25 +77,9 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
     Map<String, NumberPlate> numberPlatesList = new HashMap<String, NumberPlate>();
     List<String> keys = new ArrayList<String>();
     Map<String, NumberPlate> treeMap;
-    String[] PERMISSIONS = {
-            android.Manifest.permission.CAMERA,
-            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            android.Manifest.permission.INTERNET,
-    };
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-
-    public static boolean hasPermissions(Context context, String... permissions) {
-        if (context != null && permissions != null) {
-            for (String permission : permissions) {
-                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -114,7 +95,6 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
     }
 
     private void initComponents(View root) {
-        fab_cameraBtn = (FloatingActionButton) root.findViewById(R.id.fab_cameraBtn);
         fab_textBtn = (FloatingActionButton) root.findViewById(R.id.fab_textBtn);
         fab_add = (FloatingActionButton) root.findViewById(R.id.fab_add);
         back_drop = root.findViewById(R.id.back_drop);
@@ -140,14 +120,6 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
             }
         });
 
-        fab_cameraBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggleFabMode(fab_add);
-                askCameraPermission();
-            }
-        });
-
         fab_textBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,7 +137,6 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
@@ -254,15 +225,6 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
         }
     }
 
-    private void askCameraPermission() {
-        if (!hasPermissions(getActivity(), PERMISSIONS)) {
-            ActivityCompat.requestPermissions(getActivity(), PERMISSIONS, AppConstants.SCAN_PERMISSION_ALL);
-        } else {
-            openCamera();
-        }
-    }
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 //        if (!hasPermissions(getActivity(), PERMISSIONS)) {
@@ -272,10 +234,6 @@ public class ScanFragment extends Fragment implements NumberPlatePopUp.NumberPla
 //        }
     }
 
-    private void openCamera() {
-        Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(camera, AppConstants.CAMERA_REQUEST_CODE);
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

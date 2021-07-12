@@ -16,6 +16,7 @@ import com.adintech.smartparking.NormalUser.NearByAreaActivity;
 import com.adintech.smartparking.NormalUser.UserHistoryActivity;
 import com.adintech.smartparking.OwnerUser.AreaHistoryActivity;
 import com.adintech.smartparking.OwnerUser.MainOwnerActivity;
+import com.adintech.smartparking.R;
 import com.adintech.smartparking.classes.User;
 import com.adintech.smartparking.common.BookingDetailsActivity;
 import com.adintech.smartparking.utils.AppConstants;
@@ -37,6 +38,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash_screen);
         auth = FirebaseAuth.getInstance();
         SharedPreferences sh = getSharedPreferences("ShowIntro", MODE_PRIVATE);// The value will be default as empty string because for the very first time when the app is opened, there is nothing to show
         if (sh.getBoolean("show", true)) {

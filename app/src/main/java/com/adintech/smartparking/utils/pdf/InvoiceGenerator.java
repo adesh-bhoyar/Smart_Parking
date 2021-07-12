@@ -216,12 +216,12 @@ public class InvoiceGenerator {
         }
     }
 
-    public void downloadFile(String userID, String bookingKey, Context context, Application application) {
+    public void downloadFile(BookedSlots bookedSlots, String bookingKey, Context context, Application application) {
         if (utils.isNetworkAvailable(application)) {
             FirebaseStorage storage = FirebaseStorage.getInstance();
-            StorageReference invoiceRef = storage.getReference().child("invoice/".concat(userID).concat("/").concat(bookingKey).concat(".pdf"));
+            StorageReference invoiceRef = storage.getReference().child("invoice/".concat(bookedSlots.userID).concat("/").concat(bookingKey).concat(".pdf"));
 
-            final File localFile = new File(context.getExternalCacheDir(), File.separator + "invoice.pdf");
+            final File localFile = new File(context.getExternalCacheDir(), File.separator + bookedSlots.placeID + "_invoice" + ".pdf");
             invoiceRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
@@ -239,8 +239,8 @@ public class InvoiceGenerator {
 
     }
 
-    public void openFile(Context context) {
-        final File localFile = new File(context.getExternalCacheDir(), File.separator + "invoice.pdf");
+    public void openFile(Context context, BookedSlots bookedSlots) {
+        final File localFile = new File(context.getExternalCacheDir(), File.separator + bookedSlots.placeID + "_invoice" + ".pdf");
         Intent target = new Intent(Intent.ACTION_VIEW);
         target.setDataAndType(Uri.fromFile(localFile), "application/pdf");
         target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
@@ -253,7 +253,7 @@ public class InvoiceGenerator {
     }
 
     public void shareFile(Context context) {
-        final File localFile = new File(context.getExternalCacheDir(), File.separator + "invoice.pdf");
+        final File localFile = new File(context.getExternalCacheDir(), File.separator + bookingKey + "_invoice" + ".pdf");
         Intent share = new Intent(Intent.ACTION_SEND);
         if (localFile.exists()) {
             share.setType("application/pdf");

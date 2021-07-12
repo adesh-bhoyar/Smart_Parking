@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Smart Parking</string>
-    <string name="splash_screen">Splash Screen</string>
 
     <string name="firebase_page_protocol">https</string>
     <string name="firebase_page_url">parking-system-v1.firebaseapp.com</string>
@@ -9,9 +8,6 @@
 
 
     <string name="map_key">AIzaSyCftAdSEg7_zUphgUEamTNc0LQLwyuHgLE</string>
-
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_main_owner">MainActivity</string>
 
     <string name="title_dashboard_fragment">Dashboard</string>
     <string name="title_scan_fragment">Scan</string>
@@ -24,8 +20,6 @@
     <string name="notification_channel_name_1">Channel name</string>
 
     //============================AboutUs============================
-    <string name="login_successfully">Login Successfully</string>
-    <string name="user_name_or_password_is_incorrect">User name or password is incorrect !!</string>
     <string name="personal_privacy_policy">Personal Privacy Policy</string>
     <string name="all_rights_reserved.">Copyright@2021 All rights reserved.</string>
     <string name="text_version">Version %s</string>

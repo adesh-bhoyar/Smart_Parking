@@ -15,7 +15,8 @@ public class AboutMeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
-        getSupportActionBar().hide();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("About");
 
         TextView textView = findViewById(R.id.version_name);
         //back button
@@ -28,6 +29,7 @@ public class AboutMeActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         finish();
+        overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
         return true;
     }
 

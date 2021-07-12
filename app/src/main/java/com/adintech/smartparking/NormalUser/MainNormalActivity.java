@@ -23,9 +23,6 @@ public class MainNormalActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase db;
 
-    Boolean dialogshown = false;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

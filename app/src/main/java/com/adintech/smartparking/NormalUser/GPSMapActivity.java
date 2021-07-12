@@ -162,7 +162,7 @@ public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallb
                     MarkerOptions options = new MarkerOptions().position(globalLatLngIntent)
                             .title(nameIntent);
                     gMap.addMarker(options);
-                    gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLngIntent, 30));
+                    gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLngIntent, 14));
                 } else {
                     for (Map.Entry<String, ParkingArea> stringParkingAreaEntry : parkingAreasList.entrySet()) {
                         Map.Entry mapElement = (Map.Entry) stringParkingAreaEntry;
@@ -208,7 +208,7 @@ public class GPSMapActivity extends AppCompatActivity implements OnMapReadyCallb
                                     location.getLongitude());
                             googleMap.addMarker(new MarkerOptions().position(globalLatLng).title("I am here"));
                             if (zoom) {
-                                gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLng, 30));
+                                gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(globalLatLng, 14));
                             }
                         }
                     });

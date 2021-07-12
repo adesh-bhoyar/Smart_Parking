@@ -393,12 +393,12 @@ public class BookingDetailsActivity extends AppCompatActivity implements View.On
         switch (view.getId()) {
             case R.id.openInvoicePdf:
                 Toast.makeText(BookingDetailsActivity.this, "Open File", Toast.LENGTH_SHORT).show();
-                invoiceGenerator.downloadFile(bookingSlot.userID, UUID, BookingDetailsActivity.this, getApplication());
-                invoiceGenerator.openFile(BookingDetailsActivity.this);
+                invoiceGenerator.downloadFile(bookingSlot, UUID, BookingDetailsActivity.this, getApplication());
+                invoiceGenerator.openFile(BookingDetailsActivity.this, bookingSlot);
                 break;
             case R.id.shareInvoicePdf:
                 Toast.makeText(BookingDetailsActivity.this, "Share File", Toast.LENGTH_SHORT).show();
-                invoiceGenerator.downloadFile(bookingSlot.userID, UUID, BookingDetailsActivity.this, getApplication());
+                invoiceGenerator.downloadFile(bookingSlot, UUID, BookingDetailsActivity.this, getApplication());
                 invoiceGenerator.shareFile(BookingDetailsActivity.this);
                 break;
         }
